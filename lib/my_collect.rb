@@ -1,8 +1,9 @@
 def my_collect(collection) 
-
-  collection.collect do |each_item|
-    each_item.capitalize
-  end
+counter = 0 
+while counter < collection.length -1 do
+  yield(collection[counter])
+  counter += 1 
+end
   
 end
 
